@@ -1,90 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Website</title>
+    <style>
+        /* CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
 <body>
-    
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<div style="text-align: center;">
- 
-   <script>
-      function PlayMusic() {
-  
-  var play=document.getElementById("myAudio");
-  play.play();
-}
-   </script>
-              <h1>  </h1> <h1>  </h1> <h1>  </h1> <h1>  </h1> <h1>  </h1> <h1>  </h1> <h1>  </h1> <h1>  </h1>
-              <div class="huh">
+    <header>
+        <h1>Advanced Website</h1>
+    </header>
 
-                <div> 
-     <div class="cube">
+    <nav>
+        <a href="#" onclick="loadPage('home')">Home</a>
+        <a href="#" onclick="loadPage('about')">About</a>
+        <a href="#" onclick="loadPage('contact')">Contact</a>
+    </nav>
 
-    <div>
-        <h1>  </h1>
-        <span class="profiler"></span>
-        <h1>Divine</h1>
-         <h2>They/Them/:3</h1>
-            <h3>Hi!, Im Divine I Code In C# & Html And Im Intrested In Cyber Security <3!!!</h3>
-            <h1>  </h1>
-            <a onclick="PlayMusic()" class="btn1" ></a>
-                 
-                   
-                   <audio id="myAudio">
-                
-                    <source src="https://cdn.discordapp.com/attachments/1143360581718528071/1207855706116460595/rebzyyx_-_daydreaming_slowed__reverb_lyrics.mp3?ex=65e12a49&is=65ceb549&hm=96d7ce687acdde1fcf3a22e80a7cd8375189d91d4582c169e3387cb03e92e692&" type="audio/mpeg">
+    <section id="content">
+        <h2>Welcome</h2>
+        <p>This is the home page of our advanced website.</p>
+    </section>
 
-                  </audio>     
-    </div>
-    <div> 
-  <style>
-    .profiler
-    {
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-image: url(https://th.bing.com/th/id/OIP.0djfVhpFTZJBiu4cM5P8ugAAAA?rs=1&pid=ImgDetMain);
-        height: 150px;
-  width: 150px;
-  border-radius: 75%;
-display: inline-block;
-    }
-    .btn1 {
-  
-  background-image: url(https://cdn.discordapp.com/attachments/1137940396220096512/1207516472927059968/OIP__3_-removebg-preview.png?ex=65dfee59&is=65cd7959&hm=41c7b8faa9baf6465d0f3e1788f44002f5469d3d00be0524a788c2d84711c019&);
-  background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 0%;
-    border: none;
-   
-    font-size: 16px;
-    padding: 15px 32px;
-   
-}
-.huh {
-    left:30%;
-  position: absolute;
-  top: 23%;
-}
-    .cube
-    {
-        top:15%;
-       left:0;
-       position: relative; 
-        background-position: center;
-        color: white;
-        opacity: 0.7;
-        background-repeat: no-repeat;
-        background-size: contain;
-    background-color: rgb(53, 52, 52);
-        height: 500px;
-  width: 800px;
-  border-radius :2%;
-display: inline-block;
-    }
-    body
-    {
-        
-        background-image: url(https://i.pinimg.com/originals/96/0e/e6/960ee6ddff9b59d816b453f8242403cb.gif);
-     }
-  </style>
+    <footer>
+        &copy; 2024 Advanced Website. All rights reserved.
+    </footer>
+
+    <script>
+        // JavaScript for dynamic content loading
+        function loadPage(page) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("content").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", page + ".html", true);
+            xhttp.send();
+        }
+    </script>
 </body>
 </html>
