@@ -1,21 +1,31 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <div style="text-align: center;">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@divine</title>
-    <span class="square"></span>
     <style>
-        .square
-        {
+        .square {
             height: 150px;
-  width: 900px;
-  background-image: url(https://media.discordapp.net/attachments/1157089420386779276/1207528700313079878/image_3.png?ex=65dff9bc&is=65cd84bc&hm=5e113ed8d5f04be8921e2afebf92221ec1e9269d0a6db2eb1b2baf2b96ec1210&);
-       background-repeat: no-repeat;
-        background-size: cover;
+            width: 100%; /* Change width to 100% */
+            max-width: 900px; /* Set maximum width */
+            background-image: url(https://media.discordapp.net/attachments/1157089420386779276/1207528700313079878/image_3.png?ex=65dff9bc&is=65cd84bc&hm=5e113ed8d5f04be8921e2afebf92221ec1e9269d0a6db2eb1b2baf2b96ec1210&);
+            background-repeat: no-repeat;
+            background-size: cover;
             border-radius: 5%;
             display: inline-block;
         }
+
+        @media screen and (max-width: 900px) {
+            .square {
+                width: 90%; /* Adjust as necessary */
+            }
+        }
     </style>
 </head>
+<body>
+    <div style="text-align: center;">
+        <span class="square"></span>
+    </div>
+</body>
 </html>
-</div>
